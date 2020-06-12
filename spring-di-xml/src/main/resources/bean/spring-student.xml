@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+    <bean id="myStudent" class="com.ljs.entity.Student">
+        <property name="name" value="ljs"/>
+        <property name="age" value="23"/>
+        <property name="school" ref="school"/>
+    </bean>
+
+    <bean id="mystu" class="com.ljs.entity.Student">
+        <constructor-arg name="name" value="shmma"/>
+        <constructor-arg name="age" value="100"/>
+        <property name="school" ref="school"/>
+    </bean>
+
+    <bean id="mystu01" class="com.ljs.entity.Student">
+        <constructor-arg index="0" value="gaung"/>
+        <constructor-arg index="1" value="21"/>
+        <property name="school" ref="school"></property>
+    </bean>
+
+
+    <!--<bean id="stu03" class="com.ljs.entity.Student" autowire="byType" primary="false">-->
+        <!--<property name="name" value="拉下"/>-->
+        <!--<property name="age" value="32"/>-->
+    <!--</bean>-->
+
+
+    <bean id="stu02" class="com.ljs.entity.Student" autowire="byName">
+        <property name="name" value="何用"/>
+        <property name="age" value="24"/>
+    </bean>
+
+
+
+</beans>
