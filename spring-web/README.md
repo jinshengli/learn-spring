@@ -9,16 +9,22 @@
 #### 实验步骤
 
 1. 加入servlet依赖
-    jsp依赖
-    spring项目相关依赖【spring-mybatis】
-    spring-web 依赖 【封装好了contextLoaderListener】
+
+    1）jsp依赖
+    
+    2）spring项目相关依赖【spring-mybatis】
+    
+    3）spring-web 依赖 【封装好了contextLoaderListener】
+    
 2. maven 创建web项目
 3. 配置web.xml
 
-    注册监听器 ContextLoaderListener
-    指定 Spring  配置文件的位置<context-param>
-    注册自定义的servlet.    
+    1）注册监听器 ContextLoaderListener
     
+    2）指定 Spring  配置文件的位置<context-param>
+    
+    3）注册自定义的servlet.    
+
 4. 引入spring-mybatis的代码
 
 
