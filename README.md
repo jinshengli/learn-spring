@@ -3,6 +3,11 @@
 
 #### spring ioc
 
+创建容器
+    
+    String config = "beans.xml";
+    ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(config);
+    
 
 #### spring xml-DI
 
@@ -36,7 +41,27 @@
 5. @Resource同上，默认模式不太一样
 
 
+#### spring-aop
+
+使用aspect的aop注解实现aop功能
+
+1. 引入spring-aspect依赖
+2. 开启自动代理生成器
+3. 定义切面类
+4. 将切面类交给spring
+
+
+#### spring-mybatis
+
+spring整合mybatis。 基本思路是由spring创建和维护mybatis
+中的一些必要对象。比如SqlSessionFactory, Dao动态代理对象。
 
 
 
+#### spring-transaction
+
+使用spring事务。
+
+
+#### spring-web
 

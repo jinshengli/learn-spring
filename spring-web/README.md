@@ -30,10 +30,8 @@
 
 #### spring容器保存在哪合适？
 
-######1. 每次请求创建一个applicationContext，不合适。
-
-
-######2. 在web项目启动是创建WebApplicationContext，保存到servletContext对象中
+    1. 每次请求创建一个applicationContext，不合适.
+    2. 在web项目启动是创建WebApplicationContext，保存到servletContext对象中
 
     对于 Web 应用来说，ServletContext 对象是唯一的，一个 Web 应用，只有一个
     ServletContext 对象，该对象是在 Web 应用装载时初始化的。若将 Spring 容器的创建时机，
@@ -56,7 +54,15 @@ ServletContextListener监听ServletContext对象
 #### ContextLoaderListener
 
 Spring 为该监听器接口定义了一个实现类 ContextLoaderListener，完成了两个很重要的
-工作：创建容器对象，并将容器对象放入到了ServletContext 的空间中
+工作：创建容器对象，并将容器对象放入到了ServletContext 的空间中.
+
+
+ContextLoaderListener 在对 Spring 容器进行创建时，需要加载 Spring 配置文件。其默认
+的 Spring 配置文件位置与名称为：WEB-INF/applicationContext.xml。一般指定spring的配置文件，通过
+<context-param>
+
+
+
 
 
     public class ContextLoaderListener extends ContextLoader implements ServletContextListener {
