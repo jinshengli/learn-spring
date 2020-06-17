@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ljs.dao.StudentDao">
+
+    <select id="insertStudent" parameterType="com.ljs.entity.Student" resultType="integer">
+
+        INSERT INTO student(`name`, `age`)
+        VALUES (#{name}, #{age})
+
+    </select>
+
+</mapper>
